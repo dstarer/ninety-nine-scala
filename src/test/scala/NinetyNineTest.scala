@@ -54,11 +54,11 @@ class NinetyNineTest extends FunSuite {
         val a = new P05
         val ls = List(7, 8, 0, "4", "6")
         println(a.reverseRecursive(ls))
- 
+        
         assert(a.reverseRecursive(ls).equals(ls.reverse))
- 
+        
         assert(a.reverseFunctional(ls).equals(ls.reverse))
- 
+        
         assert(a.reverseFunctionalLeft(ls).equals(ls.reverse))
     }
     
@@ -71,6 +71,66 @@ class NinetyNineTest extends FunSuite {
         assert(a.isPalindromeRecursive(ls2).equals(true))
         var ls3 = List(1, 4, 2, 1)
         assert(a.isPalindromeRecursive(ls3).equals(false))
+    }
+    
+    test("P07") {
+        val a = new P07
+        val ls1 = List(List(1, 2), List(3, 4), List(5, List(6, 7)))
+        println(a.flattenRecursive(ls1))
+        println(ls1.flatten)
+        println(a.flatten(ls1))
+    }
+    
+    test("P08") {
+        val a = new P08
+        val ls1 = List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')
+        println(a compress (ls1))
+        println(a compressFunctional ls1)
+    }
+    
+    test("p09") {
+        val a = new P09
+        val ls1 = List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')
+        println(a pack ls1)
+        println(a packRecursive ls1)
+    }
+    
+    test("P10") {
+        val a= new P09
+        val ls1 = List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')
+        println(a encodeWithRunLength (ls1))
+        println(a encodeSimpler(ls1))
+    }
+    
+    test("p11") {
+        val a= new P09
+        val ls1 = List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')
+        println(a encodeWithSimpleRunLength  (ls1))
+        println(a encodefor11(ls1))
+    }
+    
+    test("p12") {
+        val a = new P09
+        val ls2 = List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e))
+        println(a decode(ls2))
+    }
+    
+    test("p13") {
+        val a= new P09
+        val ls1 = List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')
+        println(a encodeWithRunLength (ls1))
+    }
+    
+    test("P14") {
+        val a = new P09
+        val ls1 = List('a, 'b, 'c, 'c, 'd)
+        println(a duplicateElements(ls1))
+    }
+    
+    test("P15") {
+        val a = new P09
+        val ls1 = List('a, 'b, 'c, 'c, 'd)
+        println(a duplicateElementsNth (ls1, 3))
     }
 }
 
