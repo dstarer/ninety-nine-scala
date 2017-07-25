@@ -176,5 +176,39 @@ class NinetyNineTest extends FunSuite {
         println(a range(4, 9))
         println(a rangeFunctional(4, 9))
     }
+
+    test("P23") {
+        val a = new P09
+        println(a randomNumbers(3, List('a, 'b, 'c, 'd, 'f, 'g, 'h)))
+        println(a randomSelect(3, List('a, 'b, 'c, 'd, 'f, 'g, 'h)))
+    }
+
+    test("P24") {
+        val a = new P09
+        println(a lotto(6, 49))
+    }
+
+    test("p25") {
+        val a = new P09
+        println(a randomPermute (List('a, 'b, 'c, 'd, 'e, 'f)))
+        println(a randomPermuteFisherYates (List('a, 'b, 'c, 'd, 'e, 'f)))
+    }
+
+    test("p26") {
+        val a = new P09
+        println(a combinations(3, List('a, 'b, 'c, 'd, 'e, 'f)))
+    }
+
+    test("P27") {
+        val a = new P09
+        println(a group3 (List("Aldo", "Beat", "Carla", "David", "Evi", "Flip", "Gary", "Hugo", "Ida")))
+        println(a groupAccordingList(List(2, 2, 5), List("Aldo", "Beat", "Carla", "David", "Evi", "Flip", "Gary", "Hugo", "Ida")))
+    }
+
+    test("P28") {
+        val a = new P09
+        println(a lsort (List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o))))
+        println(a lsortFreq (List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o))))
+    }
 }
 
