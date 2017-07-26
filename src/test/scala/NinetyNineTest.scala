@@ -210,5 +210,33 @@ class NinetyNineTest extends FunSuite {
         println(a lsort (List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o))))
         println(a lsortFreq (List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o))))
     }
+
+    test("P31") {
+        val a = new Arithmetic
+        println(a isPrime (7))
+    }
+
+    test("P32") {
+        val a = new Arithmetic
+        println(a gcd(4, 6))
+    }
+    test("P33") {
+        val a = new Arithmetic
+        println(a isCoprime(35, 64))
+    }
+    test("P34") {
+        val a = new Arithmetic
+        println(a totient (10))
+        println(a totientFunc (10))
+    }
+    test("P35") {
+        val a = new Arithmetic
+        println(a primeFactors (12))
+    }
+
+    test("P36") {
+        val a = new Arithmetic
+        println(a primeFactorMultiplicity(12))
+    }
 }
 
